@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title></title>
+</head>
+
+<body>
+ 
+<p>
+  <script src="./js/jquery-1.11.3.js" language="javascript"></script>
+  <script src="./js/h5Player.1.1.js" language="javascript"></script>
+<strong>HTML5 音频/视频 播放插件</strong></p>
+
+<p>作者： Webber  QQ:751441459</p>
+<p>1，引入jquery库<br>
+</p>
+<p>
+  <textarea name="textarea2" id="textarea2" style=" width:500px; height:50px;"><script src="./js/jquery-1.11.3.js" language="javascript"></script>
+  </textarea>
+</p>
+<p>&nbsp;</p>
+<p>2，引入插件</p>
+<p>
+  <textarea name="textarea3" id="textarea3" style=" width:500px; height:50px;"><script src="./js/h5Player.1.1.js" language="javascript"></script>
+  </textarea>
+</p>
+<p>调用代码一：</p>
+<p>
+  <label for="textfield"></label>
+  <textarea name="textarea" id="textarea" style=" width:500px; height:200px;"> $.h5Player({
+    'src':'./images/allbg.mp3',
+    'auto':true,
+    'cool':1,    //音频下开启是否支持默认样式
+    'loop':false, //是否循环
+    'onPlay':function(){},//开始播放回调函数
+    'pause':function(){}, //暂停或停止时回调
+    'ended':function(){}, //播放结束时回调
+    'timeupdate':function(currentTime, duration){} //播放实时返回时间点和总时间可用于制作进度  
+ });
+
+  </textarea>
+</p>
+<p>调用示例2：</p>
+<p>说明：返回的对象支持原生audio的方法</p>
+<p>
+  <textarea name="textarea4" id="textarea4" style=" width:500px; height:200px;"> 
+  var player = $.h5Player({
+    'src':'./images/allbg.mp3',
+    'auto':false,
+    'cool':1,    //音频下开启是否支持默认样式
+    'loop':false 
+ });
+ player.play();//开始播放
+ player.pause()://暂停播放
+  </textarea>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<script>
+ 
+ 
+ var player = $.h5Player({
+	'src':'./images/allbg.mp3',
+	'auto':true,
+	'cool':1,    //音频下开启是否支持默认样式
+ });
+ 
+function playTheMedia(){
+	player.play();
+}
+ 
+ 
+  </script>
+</body>
+</html>
